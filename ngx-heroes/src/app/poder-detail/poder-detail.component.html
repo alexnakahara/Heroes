@@ -1,0 +1,29 @@
+<div *ngIf="poder">
+
+    <h2>Detalhes {{poder.tx_poder}} </h2>
+    <div><span>Id Poder: </span>{{poder.id_poder}}</div>
+    <!-- <div><span>Id Heroi: </span>{{poder.id_hero}}</div> -->
+    <div><span>Potencia do Poder: </span>{{poder.nu_potencia}}</div>
+     
+ 
+
+    <form method="post" (ngSubmit)="atualiza()" [formGroup]="formulario" >
+    <div class="form-group">
+      <label>Nome do Poder:
+        <input type="text" name="tx_poder" placeholder="Poder" formControlName="tx_poder"/>
+      </label>
+    </div>
+    <div class="form-group">
+      <label>Potencia do Poder:
+        <input type="number" name="nu_potencia" placeholder="Potencia" formControlName="nu_potencia"/>
+      </label>
+    </div>
+   
+    <div> 
+      <button (click)="goBack()">Voltar</button>
+      <button type="submit" class="btn btn-primary" [disabled]="formulario.invalid">Atualizar</button>
+    </div>
+
+  </form>
+</div>
+ 

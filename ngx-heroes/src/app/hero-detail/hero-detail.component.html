@@ -1,0 +1,20 @@
+<div *ngIf="hero">
+
+  <h2>{{hero.tx_nome | uppercase}} Details</h2>
+  <div><span>Id: </span>{{hero.id_hero}}</div>
+  <div>
+    <label>Nome:
+      <input [(ngModel)]="hero.tx_nome" placeholder="Nome"/>
+    </label>
+    <div> 
+      <button (click)="goBack()">Go Back</button>
+      <button (click)="save()">Save</button>
+    </div>
+  </div>
+</div>
+  
+  <app-list-poder *ngIf="hero" [id]=hero.id_hero [poderes]="hero.poderes"></app-list-poder>
+
+
+ 
+

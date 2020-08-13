@@ -1,0 +1,25 @@
+<ul class="poderes">
+  <li *ngFor="let poder of poderes">
+    <a routerLink="/detailPoder/{{poder.id_poder}}">
+      <span class="badge">{{poder.id_poder}}</span> {{poder.tx_poder}}<span class="potencia">{{poder.nu_potencia}}</span>
+    </a>
+    <button class="delete" title="deletar poder"
+      (click)="delete(poder)">x</button>
+  </li>
+</ul>
+
+<div>
+    <h2>Adicionar Poder</h2>
+  <label>Poder:
+    <input #poderName />
+    Potencia do Poder
+    <input type="number" #poderPotencia />
+  </label>
+  <div> 
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="addPoder(poderName.value, poderPotencia.value); poderName.value=null; poderPotencia.value=null">
+    Adicionar
+  </button>
+</div>
+</div>
+
