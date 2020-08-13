@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin",
+    "\\Controllers",
+    "\\Models",
+    "\\obj",
+    "\\obj\\Debug\\netcoreapp2.2",
+    "\\obj\\Release",
+    "\\Properties",
+    "\\Repositories",
+    "\\Service"
+  ],
+  "SelectedNode": "\\Controllers\\HeroesController.cs",
+  "PreviewInSolutionExplorer": false
+}
